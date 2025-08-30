@@ -5,6 +5,7 @@ import App from './App.tsx';
 import { AuthPage } from './components/AuthPage';
 import TagListPage from './components/TagListPage';
 import SettingsPage from './components/SettingsPage';
+import ContactsPage from './components/ContactsPage';
 import { useAuth } from './hooks/useAuth';
 import { InstancesProvider } from './hooks/useInstances';
 import './index.css';
@@ -27,6 +28,7 @@ function Root() {
           <Route path="/" element={<App />} />
           <Route path="/labels" element={<TagListPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
         </Routes>
       </BrowserRouter>
     </InstancesProvider>

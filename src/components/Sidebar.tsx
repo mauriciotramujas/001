@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Users, Settings, Bell, LogOut, Tag, Cog } from 'lucide-react';
+import { MessageSquare, Users, Settings, Bell, LogOut, Tag, Cog, UserCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { useInstances } from '../hooks/useInstances';
@@ -28,9 +28,12 @@ export const Sidebar: React.FC = () => {
       </div>
 
       <nav className="flex flex-col items-center space-y-6">
-        <button className="w-8 h-8 rounded-lg bg-[#0f172a] flex items-center justify-center text-white">
-          <Users size={16} />
-        </button>
+        <Link
+          to="/contacts"
+          className="w-8 h-8 rounded-lg hover:bg-[#0f172a] flex items-center justify-center text-gray-400 hover:text-white"
+        >
+          <UserCheck size={16} />
+        </Link>
         <button className="w-8 h-8 rounded-lg hover:bg-[#0f172a] flex items-center justify-center text-gray-400 hover:text-white">
           <Bell size={16} />
         </button>
